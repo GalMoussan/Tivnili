@@ -16,7 +16,7 @@ export function HeroSection() {
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Animated gradient mesh background */}
       <div
-        className="absolute inset-0 animate-gradient-mesh"
+        className="absolute inset-0 animate-gradient-mesh will-change-transform"
         style={{
           backgroundImage:
             'linear-gradient(135deg, var(--color-navy-900) 0%, var(--color-navy-800) 30%, rgba(217, 119, 6, 0.1) 50%, rgba(37, 99, 235, 0.1) 70%, var(--color-navy-900) 100%)',
@@ -26,7 +26,7 @@ export function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 py-20 gap-8 max-w-4xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 py-20 gap-8 max-w-4xl mx-auto">
         {/* Logo */}
         <motion.div
           variants={fadeInUp}
@@ -49,7 +49,7 @@ export function HeroSection() {
           initial="hidden"
           animate="visible"
           custom={0.2}
-          className="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold text-cream leading-tight"
+          className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-cream leading-tight"
         >
           Your business, <AmberText>finally</AmberText> built.
         </motion.h1>

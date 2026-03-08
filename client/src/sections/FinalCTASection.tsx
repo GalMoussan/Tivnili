@@ -3,9 +3,9 @@ import { WhatsAppInput } from '../components/WhatsAppInput';
 
 export function FinalCTASection() {
   return (
-    <section className="bg-gradient-to-br from-amber-500/10 via-navy-900 to-navy-800 py-24 sm:py-32">
-      <div className="mx-auto max-w-3xl px-6 text-center flex flex-col items-center gap-8">
-        <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-cream leading-tight">
+    <section className="bg-gradient-to-br from-amber-500/10 via-navy-900 to-navy-800 py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center flex flex-col items-center gap-8">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-cream leading-tight">
           Your business, <AmberText>finally</AmberText> built.
         </h2>
 

@@ -29,7 +29,7 @@ const tiers = [
 
 export function PricingSection() {
   return (
-    <SectionWrapper id="pricing">
+    <SectionWrapper id="pricing" className="py-16 sm:py-20 lg:py-24">
       <Container>
         <SectionHeading>Pricing</SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">

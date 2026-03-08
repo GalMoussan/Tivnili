@@ -12,7 +12,7 @@ export function Footer() {
 
   return (
     <footer className="bg-navy-950 border-t border-white/5 py-12">
-      <div className="mx-auto max-w-6xl px-6 flex flex-col items-center gap-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col items-center gap-8">
         {/* Logo */}
         <div className="flex flex-col items-center gap-1">
           <span className="font-display text-2xl font-bold tracking-wide text-cream">
@@ -29,12 +29,12 @@ export function Footer() {
         </p>
 
         {/* Navigation */}
-        <nav className="flex flex-wrap justify-center gap-6">
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-smoke/70 hover:text-amber-500 transition-colors"
+              className="text-sm text-smoke/70 hover:text-amber-500 transition-colors py-2"
               {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             >
               {link.label}

@@ -5,7 +5,7 @@ import { ProjectCard } from '../components/ProjectCard';
 
 export function PortfolioSection() {
   return (
-    <SectionWrapper id="work" className="py-20 sm:py-28">
+    <SectionWrapper id="work" className="py-16 sm:py-20 lg:py-28">
       <Container>
         <SectionHeading>The Tivnili Standard</SectionHeading>
 

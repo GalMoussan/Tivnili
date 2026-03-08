@@ -11,7 +11,7 @@ import { Footer } from './sections/Footer';
 
 function App() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <HeroSection />
       <ServicesSection />
       <ComparisonSection />

@@ -21,7 +21,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <SectionWrapper id="services" className="py-24 bg-navy-900">
+    <SectionWrapper id="services" className="py-16 sm:py-20 lg:py-24 bg-navy-900">
       <Container>
         <SectionHeading>What I Build</SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">

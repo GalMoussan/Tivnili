@@ -32,12 +32,12 @@ export function WhatsAppInput() {
         onKeyDown={handleKeyDown}
         placeholder="Tell me what your business needs →"
         aria-label="Your message"
-        className="w-full rounded-full bg-navy-800 border border-white/10 py-4 pl-6 pr-14 text-cream placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:shadow-glow-amber transition-shadow"
+        className="w-full rounded-full bg-navy-800 border border-white/10 py-4 pl-5 pr-14 sm:pl-6 text-cream placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:shadow-glow-amber transition-shadow min-h-[48px]"
       />
       <button
         type="submit"
         aria-label="Send message via WhatsApp"
-        className="absolute right-2 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-amber-500 text-navy-900 hover:bg-amber-400 transition-colors"
+        className="absolute right-2 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-navy-900 hover:bg-amber-400 transition-colors"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

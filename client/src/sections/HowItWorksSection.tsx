@@ -25,7 +25,7 @@ export function HowItWorksSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <SectionWrapper className="py-24 bg-navy-900">
+    <SectionWrapper className="py-16 sm:py-20 lg:py-24 bg-navy-900">
       <Container>
         <SectionHeading>How It Works</SectionHeading>
         <div className="mt-16 space-y-16">

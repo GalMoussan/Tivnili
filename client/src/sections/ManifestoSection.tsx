@@ -54,7 +54,7 @@ function ManifestoLine({
   const words = line.split(' ');
 
   return (
-    <p className="text-2xl font-light leading-relaxed text-cream sm:text-4xl">
+    <p className="text-xl font-light leading-relaxed text-cream sm:text-2xl md:text-4xl">
       <span className="sr-only">{line}</span>
       <span aria-hidden="true">
         {words.map((word, wi) => {
@@ -88,8 +88,8 @@ export function ManifestoSection() {
   let wordOffset = 0;
 
   return (
-    <section ref={ref} className="relative min-h-[300vh] bg-navy-950">
-      <div className="sticky top-0 flex min-h-screen items-center justify-center px-6">
+    <section ref={ref} className="relative min-h-[200vh] sm:min-h-[300vh] bg-navy-950">
+      <div className="sticky top-0 flex min-h-screen items-center justify-center px-4 sm:px-6">
         <div className="max-w-3xl space-y-8 text-center">
           {lines.map((line) => {
             const offset = wordOffset;
@@ -107,7 +107,7 @@ export function ManifestoSection() {
           })}
 
           <p lang="he" className="mt-12">
-            <span className="text-6xl font-bold text-amber-500 sm:text-8xl">
+            <span className="text-5xl font-bold text-amber-500 sm:text-6xl md:text-8xl">
               אמת
             </span>
           </p>

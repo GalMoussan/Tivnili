@@ -9,7 +9,7 @@ interface PricingCardProps {
 export function PricingCard({ name, price, description, badge, popular }: PricingCardProps) {
   return (
     <div
-      className={`bg-navy-800 rounded-2xl p-8 border relative hover:-translate-y-1 transition-all duration-300 ${
+      className={`bg-navy-800 rounded-2xl p-6 sm:p-8 border relative hover:-translate-y-1 transition-all duration-300 ${
         popular ? 'border-amber-500/30' : 'border-white/5'
       }`}
     >

@@ -35,7 +35,7 @@ export function SocialProofSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <SectionWrapper className="py-20 sm:py-28">
+    <SectionWrapper className="py-16 sm:py-20 lg:py-28">
       <Container>
         <div className="flex flex-col gap-6 items-center max-w-2xl mx-auto">
           {testimonials.map((t, i) => {

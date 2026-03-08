@@ -9,7 +9,7 @@ export function ProjectCard({ name, description, result, featured }: ProjectCard
   return (
     <div
       className={`bg-navy-800 rounded-2xl border border-white/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-amber group ${
-        featured ? 'p-10 col-span-full' : 'p-6'
+        featured ? 'p-6 sm:p-10 col-span-full' : 'p-6'
       }`}
     >
       <h3

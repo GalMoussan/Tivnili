@@ -12,7 +12,7 @@ const comparisons = [
 
 export function ComparisonSection() {
   return (
-    <SectionWrapper className="py-20 sm:py-28">
+    <SectionWrapper className="py-16 sm:py-20 lg:py-28">
       <Container>
         <div className="max-w-3xl mx-auto">
           {comparisons.map((row, i) => (
