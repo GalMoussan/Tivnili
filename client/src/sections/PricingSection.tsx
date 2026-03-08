@@ -29,7 +29,7 @@ const tiers = [
 
 export function PricingSection() {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="pricing">
       <Container>
         <SectionHeading>Pricing</SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">

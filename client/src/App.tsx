@@ -6,6 +6,8 @@ import { HowItWorksSection } from './sections/HowItWorksSection';
 import { ManifestoSection } from './sections/ManifestoSection';
 import { PricingSection } from './sections/PricingSection';
 import { SocialProofSection } from './sections/SocialProofSection';
+import { FinalCTASection } from './sections/FinalCTASection';
+import { Footer } from './sections/Footer';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <ManifestoSection />
       <HowItWorksSection />
       <PricingSection />
+      <FinalCTASection />
+      <Footer />
     </main>
   );
 }
