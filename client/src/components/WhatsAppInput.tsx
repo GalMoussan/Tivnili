@@ -37,7 +37,7 @@ export function WhatsAppInput() {
       <button
         type="submit"
         aria-label="Send message via WhatsApp"
-        className="absolute right-2 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-navy-900 hover:bg-amber-400 transition-colors"
+        className="absolute right-2 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-navy-900 hover:bg-amber-400 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-navy-800"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

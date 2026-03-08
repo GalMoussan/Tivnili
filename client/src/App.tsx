@@ -11,18 +11,26 @@ import { Footer } from './sections/Footer';
 
 function App() {
   return (
-    <main className="overflow-x-hidden">
-      <HeroSection />
-      <ServicesSection />
-      <ComparisonSection />
-      <PortfolioSection />
-      <SocialProofSection />
-      <ManifestoSection />
-      <HowItWorksSection />
-      <PricingSection />
-      <FinalCTASection />
-      <Footer />
-    </main>
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-amber-500 focus:text-navy-900 focus:font-semibold focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-300"
+      >
+        Skip to content
+      </a>
+      <main id="main-content" className="overflow-x-hidden">
+        <HeroSection />
+        <ServicesSection />
+        <ComparisonSection />
+        <PortfolioSection />
+        <SocialProofSection />
+        <ManifestoSection />
+        <HowItWorksSection />
+        <PricingSection />
+        <FinalCTASection />
+        <Footer />
+      </main>
+    </>
   );
 }
 

@@ -34,7 +34,7 @@ export function Footer() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-smoke/70 hover:text-amber-500 transition-colors py-2"
+              className="text-sm text-smoke/70 hover:text-amber-500 transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:rounded"
               {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             >
               {link.label}
