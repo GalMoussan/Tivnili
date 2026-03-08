@@ -1,6 +1,10 @@
 import { HeroSection } from './sections/HeroSection';
 import { ServicesSection } from './sections/ServicesSection';
 import { ComparisonSection } from './sections/ComparisonSection';
+import { PortfolioSection } from './sections/PortfolioSection';
+import { HowItWorksSection } from './sections/HowItWorksSection';
+import { ManifestoSection } from './sections/ManifestoSection';
+import { PricingSection } from './sections/PricingSection';
 
 function App() {
   return (
@@ -8,6 +12,10 @@ function App() {
       <HeroSection />
       <ServicesSection />
       <ComparisonSection />
+      <PortfolioSection />
+      <ManifestoSection />
+      <HowItWorksSection />
+      <PricingSection />
     </main>
   );
 }
