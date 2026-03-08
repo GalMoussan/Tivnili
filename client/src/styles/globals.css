@@ -1,1 +1,65 @@
 @import "tailwindcss";
+
+@theme {
+  /* Navy palette */
+  --color-navy-700: #1E293B;
+  --color-navy-800: #111827;
+  --color-navy-900: #0B1120;
+
+  /* Amber palette */
+  --color-amber-400: #FBBF24;
+  --color-amber-500: #F59E0B;
+  --color-amber-600: #D97706;
+
+  /* Neutrals */
+  --color-cream: #F8F7F4;
+  --color-smoke: #94A3B8;
+
+  /* Font families */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Custom shadow */
+  --shadow-glow-amber: 0 0 20px rgba(251, 191, 36, 0.3), 0 0 40px rgba(251, 191, 36, 0.1);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-navy-900);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--color-amber-500);
+  color: var(--color-navy-900);
+}
+
+/* Custom scrollbar (dark theme) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-navy-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-smoke);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-navy-700) var(--color-navy-900);
+}
