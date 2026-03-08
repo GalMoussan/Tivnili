@@ -5,6 +5,7 @@ import { PortfolioSection } from './sections/PortfolioSection';
 import { HowItWorksSection } from './sections/HowItWorksSection';
 import { ManifestoSection } from './sections/ManifestoSection';
 import { PricingSection } from './sections/PricingSection';
+import { SocialProofSection } from './sections/SocialProofSection';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ServicesSection />
       <ComparisonSection />
       <PortfolioSection />
+      <SocialProofSection />
       <ManifestoSection />
       <HowItWorksSection />
       <PricingSection />
