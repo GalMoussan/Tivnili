@@ -1,9 +1,14 @@
+import { HeroSection } from './sections/HeroSection';
+import { ServicesSection } from './sections/ServicesSection';
+import { ComparisonSection } from './sections/ComparisonSection';
+
 function App() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-white">
-      <h1 className="text-4xl font-bold text-center pt-20">Tivnili</h1>
-      <p className="text-center text-neutral-400 mt-4">Coming soon</p>
-    </div>
+    <main>
+      <HeroSection />
+      <ServicesSection />
+      <ComparisonSection />
+    </main>
   );
 }
 
