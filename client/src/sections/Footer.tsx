@@ -1,31 +1,39 @@
+import { useContent } from '../hooks/useContent';
+import { useLocale } from '../hooks/useLocale';
+
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? '';
 
-const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'WhatsApp', href: `https://wa.me/${WHATSAPP_NUMBER}` },
-];
-
 export function Footer() {
+  const { content } = useContent();
+  const { locale } = useLocale();
   const year = new Date().getFullYear();
+
+  const whatsappUrl = WHATSAPP_NUMBER
+    ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(content.hero.whatsappDefaultMessage)}`
+    : '#';
+
+  const navLinks = [
+    { label: content.nav.services, href: '#services' },
+    { label: content.nav.work, href: '#work' },
+    { label: content.nav.pricing, href: '#pricing' },
+    { label: content.nav.whatsapp, href: whatsappUrl },
+  ];
 
   return (
     <footer className="bg-navy-950 border-t border-white/5 py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col items-center gap-8">
         {/* Logo */}
         <div className="flex flex-col items-center gap-1">
-          <span className="font-display text-2xl font-bold tracking-wide text-cream">
-            tivnili
-          </span>
-          <span className="text-sm text-smoke" lang="he">
-            תִּבְנִילִי
-          </span>
+          <img
+            src="/wordmark-hebrew.png"
+            alt="תִּבְנִילִי"
+            className="h-12"
+          />
         </div>
 
         {/* Tagline */}
         <p className="text-sm text-smoke">
-          Built with intent. Delivered with honesty.
+          {content.footer.tagline}
         </p>
 
         {/* Navigation */}
@@ -44,7 +52,7 @@ export function Footer() {
 
         {/* Copyright */}
         <p className="text-xs text-smoke/50">
-          &copy; {year} tivnili. All rights reserved.
+          &copy; {year} {content.footer.logoText}. {content.footer.copyright}
         </p>
       </div>
     </footer>

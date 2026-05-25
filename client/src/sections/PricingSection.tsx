@@ -2,39 +2,18 @@ import { SectionWrapper } from '../components/SectionWrapper';
 import { Container } from '../components/Container';
 import { SectionHeading } from '../components/SectionHeading';
 import { PricingCard } from '../components/PricingCard';
-
-const tiers = [
-  {
-    name: 'The Foundation',
-    price: '$500',
-    description: 'One page. Full power. No surprises.',
-    badge: 'Fixed scope. No upsells.',
-  },
-  {
-    name: 'The Engine',
-    price: '$1,000–$1,200',
-    description:
-      'Stop paying someone to do manually what this system does while you sleep.',
-    badge: 'Most popular',
-    popular: true,
-  },
-  {
-    name: 'The Factory',
-    price: '$1,500–$2,000',
-    description:
-      'The full build. The full attention. No agency. No waiting. Just results.',
-    badge: 'Full access',
-  },
-];
+import { useContent } from '../hooks/useContent';
 
 export function PricingSection() {
+  const { content } = useContent();
+
   return (
-    <SectionWrapper id="pricing" className="py-16 sm:py-20 lg:py-24">
+    <SectionWrapper id="pricing" className="py-12 sm:py-16 lg:py-20">
       <Container>
-        <SectionHeading>Pricing</SectionHeading>
+        <SectionHeading>{content.pricing.heading}</SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          {tiers.map((tier) => (
-            <PricingCard key={tier.name} {...tier} />
+          {content.pricing.tiers.map((tier) => (
+            <PricingCard key={tier.name} {...tier} ctaText={content.pricing.ctaText} />
           ))}
         </div>
       </Container>

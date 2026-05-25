@@ -1,15 +1,7 @@
 import { useTransform, useReducedMotion, useMotionValueEvent, type MotionValue } from 'framer-motion';
 import { useState } from 'react';
 import { useScrollProgress } from '../hooks/useScrollProgress';
-
-const lines = [
-  'I care about this more than is probably normal.',
-  'Built with intent.',
-  'Precision is a form of respect.',
-];
-
-const allWords = lines.flatMap((line) => line.split(' '));
-const totalWords = allWords.length;
+import { useContent } from '../hooks/useContent';
 
 function Word({
   word,
@@ -82,16 +74,20 @@ function ManifestoLine({
 }
 
 export function ManifestoSection() {
-  const { ref, progress } = useScrollProgress();
+  const { content } = useContent();
+  const { ref, progress } = useScrollProgress(['start end', 'start start']);
   const prefersReducedMotion = useReducedMotion();
+
+  const allWords = content.manifesto.lines.flatMap((line) => line.split(' '));
+  const totalWords = allWords.length;
 
   let wordOffset = 0;
 
   return (
-    <section ref={ref} className="relative min-h-[200vh] sm:min-h-[300vh] bg-navy-950">
+    <section ref={ref} className="relative min-h-[120vh] sm:min-h-[150vh] bg-navy-950">
       <div className="sticky top-0 flex min-h-screen items-center justify-center px-4 sm:px-6">
         <div className="max-w-3xl space-y-8 text-center">
-          {lines.map((line) => {
+          {content.manifesto.lines.map((line) => {
             const offset = wordOffset;
             wordOffset += line.split(' ').length;
             return (
@@ -108,7 +104,7 @@ export function ManifestoSection() {
 
           <p lang="he" className="mt-12">
             <span className="text-5xl font-bold text-amber-500 sm:text-6xl md:text-8xl">
-              אמת
+              {content.manifesto.hebrew}
             </span>
           </p>
         </div>

@@ -1,29 +1,31 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../__tests__/test-utils';
 import { HeroSection } from '../HeroSection';
 
 // T006 — Hero Section
 
 describe('T006 — HeroSection', () => {
-  // Acceptance: "Logo displays 'tivnili' with 'תִּבְנִילִי' below"
-  it('renders logo text', () => {
+  // Acceptance: "Logo displays wordmark image"
+  it('renders logo wordmark', () => {
     render(<HeroSection />);
-    expect(screen.getByText('tivnili')).toBeInTheDocument();
-    expect(screen.getByText('תִּבְנִילִי')).toBeInTheDocument();
+    const logo = screen.getByAltText('tivnili');
+    expect(logo).toBeInTheDocument();
+    expect(logo.tagName).toBe('IMG');
+    expect(logo).toHaveAttribute('src', '/wordmark-tivnili.png');
   });
 
-  // Acceptance: "'finally' is highlighted in amber in the headline"
-  it('renders headline with amber-highlighted "finally"', () => {
+  // Acceptance: "'smarter' is highlighted in amber in the headline"
+  it('renders headline with amber-highlighted "smarter"', () => {
     render(<HeroSection />);
     expect(screen.getByText(/Your business/)).toBeInTheDocument();
-    const finallyEl = screen.getByText('finally');
-    expect(finallyEl.className).toMatch(/amber/);
+    const smarterEl = screen.getByText('smarter');
+    expect(smarterEl.className).toMatch(/amber/);
   });
 
   // Acceptance: "WhatsApp input is present and functional"
   it('renders WhatsApp input', () => {
     render(<HeroSection />);
-    expect(screen.getByPlaceholderText('Tell me what your business needs →')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Tell me how you run your business →')).toBeInTheDocument();
   });
 
   // Acceptance: "Hero fills full viewport height"

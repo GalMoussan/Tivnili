@@ -13,6 +13,8 @@ describe('T013 — PricingCard', () => {
         price="$500"
         description="One page. Full power. No surprises."
         badge="Fixed scope. No upsells."
+        features={['Single landing page', 'Contact form']}
+        ctaText="Let's talk"
       />
     );
     expect(screen.getByText('The Foundation')).toBeInTheDocument();
@@ -28,6 +30,8 @@ describe('T013 — PricingCard', () => {
         price="$1,000–$1,200"
         description="Stop paying someone to do manually what this system does while you sleep."
         badge="Most popular"
+        features={['Multi-page site', 'AI automation']}
+        ctaText="Let's talk"
       />
     );
     expect(screen.getByText('Most popular')).toBeInTheDocument();
@@ -41,6 +45,8 @@ describe('T013 — PricingCard', () => {
         price="$1,500–$2,000"
         description="The full build."
         badge="Full access"
+        features={['Full custom platform']}
+        ctaText="Let's talk"
       />
     );
     expect(screen.getByText('Full access')).toBeInTheDocument();

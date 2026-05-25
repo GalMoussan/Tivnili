@@ -2,43 +2,17 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { SectionWrapper } from '../components/SectionWrapper';
 import { Container } from '../components/Container';
 import { TestimonialBubble } from '../components/TestimonialBubble';
-
-const testimonials = [
-  {
-    align: 'left' as const,
-    name: 'Sarah M.',
-    business: 'Cafe owner',
-    message: 'Finally someone who actually listens. Site was live in 10 days.',
-  },
-  {
-    align: 'right' as const,
-    name: 'David K.',
-    business: 'Fitness trainer',
-    message:
-      'I sent a voice note at midnight. He replied with a working prototype.',
-  },
-  {
-    align: 'left' as const,
-    name: 'Yael R.',
-    business: 'Boutique owner',
-    message: 'No jargon. No surprises. Just results.',
-  },
-  {
-    align: 'right' as const,
-    name: 'Mark T.',
-    business: 'Real estate agent',
-    message: "He built something I didn't even know I needed.",
-  },
-];
+import { useContent } from '../hooks/useContent';
 
 export function SocialProofSection() {
+  const { content } = useContent();
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <SectionWrapper className="py-16 sm:py-20 lg:py-28">
+    <SectionWrapper className="py-12 sm:py-16 lg:py-20">
       <Container>
         <div className="flex flex-col gap-6 items-center max-w-2xl mx-auto">
-          {testimonials.map((t, i) => {
+          {content.socialProof.testimonials.map((t, i) => {
             if (prefersReducedMotion) {
               return (
                 <TestimonialBubble

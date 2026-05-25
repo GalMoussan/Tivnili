@@ -1,20 +1,22 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../__tests__/test-utils';
 import { Footer } from '../Footer';
 
 // T015 — Final CTA + Footer
 
 describe('T015 — Footer', () => {
   // Acceptance: "Footer displays logo, tagline, and navigation links"
-  it('renders logo and Hebrew text', () => {
+  it('renders logo wordmark', () => {
     render(<Footer />);
-    expect(screen.getByText('tivnili')).toBeInTheDocument();
-    expect(screen.getByText('תִּבְנִילִי')).toBeInTheDocument();
+    const logo = screen.getByAltText('תִּבְנִילִי');
+    expect(logo).toBeInTheDocument();
+    expect(logo.tagName).toBe('IMG');
+    expect(logo).toHaveAttribute('src', '/wordmark-hebrew.png');
   });
 
   it('renders tagline', () => {
     render(<Footer />);
-    expect(screen.getByText(/Built with intent/)).toBeInTheDocument();
+    expect(screen.getByText(/AI integration for the people who run things/)).toBeInTheDocument();
   });
 
   // Acceptance: "Navigation links smooth-scroll to sections"

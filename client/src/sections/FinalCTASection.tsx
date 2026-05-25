@@ -1,24 +1,32 @@
 import { AmberText } from '../components/AmberText';
 import { WhatsAppInput } from '../components/WhatsAppInput';
+import { useContent } from '../hooks/useContent';
 
 export function FinalCTASection() {
+  const { content } = useContent();
+
   return (
-    <section className="bg-gradient-to-br from-amber-500/10 via-navy-900 to-navy-800 py-16 sm:py-24 lg:py-32">
+    <section className="bg-gradient-to-br from-amber-500/10 via-navy-900 to-navy-800 py-12 sm:py-16 lg:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center flex flex-col items-center gap-8">
         <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-cream leading-tight">
-          Your business, <AmberText>finally</AmberText> built.
+          {content.finalCta.headline.before} <AmberText>{content.finalCta.headline.highlight}</AmberText> {content.finalCta.headline.after}
         </h2>
 
         <p className="text-lg text-smoke">
-          You've read enough. Let's talk.
+          {content.finalCta.subtitle}
         </p>
 
         <div className="w-full">
-          <WhatsAppInput />
+          <WhatsAppInput
+            placeholder={content.hero.whatsappPlaceholder}
+            ariaLabel={content.hero.whatsappAriaLabel}
+            buttonAriaLabel={content.hero.whatsappButtonAriaLabel}
+            prefillText={content.hero.whatsappDefaultMessage}
+          />
         </div>
 
         <p className="text-sm text-smoke/70">
-          Usually responds within the hour. Never a bot. Never a project manager. Just me.
+          {content.finalCta.footer}
         </p>
       </div>
     </section>

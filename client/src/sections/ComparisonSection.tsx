@@ -1,21 +1,16 @@
 import { SectionWrapper } from '../components/SectionWrapper';
 import { Container } from '../components/Container';
 import { ComparisonRow } from '../components/ComparisonRow';
-
-const comparisons = [
-  { oldWay: 'Hire an agency', newWay: 'Talk to one person' },
-  { oldWay: 'Wait 6–8 weeks', newWay: 'Live in 2 weeks' },
-  { oldWay: 'Pay $5,000–$15,000', newWay: 'Pay $500–$2,000' },
-  { oldWay: '3 rounds of revisions', newWay: 'You approve once' },
-  { oldWay: 'Ghost after launch', newWay: 'Still here after' },
-];
+import { useContent } from '../hooks/useContent';
 
 export function ComparisonSection() {
+  const { content } = useContent();
+
   return (
-    <SectionWrapper className="py-16 sm:py-20 lg:py-28">
+    <SectionWrapper className="py-12 sm:py-16 lg:py-20">
       <Container>
         <div className="max-w-3xl mx-auto">
-          {comparisons.map((row, i) => (
+          {content.comparison.rows.map((row, i) => (
             <ComparisonRow
               key={row.oldWay}
               oldWay={row.oldWay}
@@ -25,7 +20,7 @@ export function ComparisonSection() {
           ))}
 
           <p className="mt-12 text-center text-smoke text-sm">
-            <span lang="he">אמת</span> — This is just honest.
+            <span lang="he">{content.comparison.footer.hebrew}</span> {content.comparison.footer.text}
           </p>
         </div>
       </Container>

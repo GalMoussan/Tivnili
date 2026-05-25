@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../__tests__/test-utils';
 import { HowItWorksSection } from '../HowItWorksSection';
 
 // T012 — How It Works Section
@@ -15,15 +15,15 @@ describe('T012 — HowItWorksSection', () => {
 
   it('renders step titles', () => {
     render(<HowItWorksSection />);
-    expect(screen.getByText(/You describe it/)).toBeInTheDocument();
-    expect(screen.getByText(/I build in the open/)).toBeInTheDocument();
-    expect(screen.getByText(/You launch it/)).toBeInTheDocument();
+    expect(screen.getByText(/We talk. I listen./)).toBeInTheDocument();
+    expect(screen.getByText(/I attack the biggest bottleneck first./)).toBeInTheDocument();
+    expect(screen.getByText(/It works. Then we expand./)).toBeInTheDocument();
   });
 
   it('renders step descriptions', () => {
     render(<HowItWorksSection />);
-    expect(screen.getByText(/WhatsApp, voice note, napkin sketch/)).toBeInTheDocument();
-    expect(screen.getByText(/You see progress, not surprises/)).toBeInTheDocument();
-    expect(screen.getByText(/still here after/)).toBeInTheDocument();
+    expect(screen.getByText(/your day, your decisions, your bottlenecks/)).toBeInTheDocument();
+    expect(screen.getByText(/highest-impact integration/)).toBeInTheDocument();
+    expect(screen.getByText(/We grow your AI layer at your pace/)).toBeInTheDocument();
   });
 });

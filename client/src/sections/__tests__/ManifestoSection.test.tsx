@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../__tests__/test-utils';
 import { ManifestoSection } from '../ManifestoSection';
 
 // T011 — Manifesto Section
@@ -8,8 +8,8 @@ describe('T011 — ManifestoSection', () => {
   // Acceptance: "Text is legible and well-spaced"
   it('renders manifesto text lines', () => {
     render(<ManifestoSection />);
-    expect(screen.getByText(/care about this more than is probably normal/)).toBeInTheDocument();
-    expect(screen.getByText(/Built with intent/)).toBeInTheDocument();
+    expect(screen.getByText(/I learn how you think before I build anything/)).toBeInTheDocument();
+    expect(screen.getByText(/Built around you. Not around a template./)).toBeInTheDocument();
     expect(screen.getByText(/Precision is a form of respect/)).toBeInTheDocument();
   });
 

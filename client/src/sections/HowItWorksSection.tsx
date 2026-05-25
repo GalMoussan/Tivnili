@@ -2,35 +2,19 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { SectionWrapper } from '../components/SectionWrapper';
 import { Container } from '../components/Container';
 import { SectionHeading } from '../components/SectionHeading';
-
-const steps = [
-  {
-    number: '01',
-    title: 'You describe it',
-    description: 'WhatsApp, voice note, napkin sketch. Whatever works for you.',
-  },
-  {
-    number: '02',
-    title: 'I build in the open',
-    description: 'You see progress, not surprises. Zero-waste communication.',
-  },
-  {
-    number: '03',
-    title: 'You launch it',
-    description: "And I'm still here after. Not a ticketing system. Me.",
-  },
-];
+import { useContent } from '../hooks/useContent';
 
 export function HowItWorksSection() {
+  const { content } = useContent();
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <SectionWrapper className="py-16 sm:py-20 lg:py-24 bg-navy-900">
+    <SectionWrapper className="py-12 sm:py-16 lg:py-20 bg-navy-900">
       <Container>
-        <SectionHeading>How It Works</SectionHeading>
-        <div className="mt-16 space-y-16">
-          {steps.map((step, index) => {
-            const content = (
+        <SectionHeading>{content.howItWorks.heading}</SectionHeading>
+        <div className="mt-10 space-y-12">
+          {content.howItWorks.steps.map((step, index) => {
+            const stepContent = (
               <div key={step.number}>
                 <span className="text-5xl sm:text-7xl font-extrabold text-amber-500/20 font-display">
                   {step.number}
@@ -43,7 +27,7 @@ export function HowItWorksSection() {
             );
 
             if (prefersReducedMotion) {
-              return <div key={step.number}>{content}</div>;
+              return <div key={step.number}>{stepContent}</div>;
             }
 
             return (
@@ -58,7 +42,7 @@ export function HowItWorksSection() {
                   delay: index * 0.2,
                 }}
               >
-                {content}
+                {stepContent}
               </motion.div>
             );
           })}

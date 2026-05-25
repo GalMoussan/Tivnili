@@ -2,9 +2,11 @@
 
 @theme {
   /* Navy palette */
+  --color-navy-600: #334155;
   --color-navy-700: #1E293B;
   --color-navy-800: #111827;
   --color-navy-900: #0B1120;
+  --color-navy-950: #060A14;
 
   /* Amber palette */
   --color-amber-400: #FBBF24;
@@ -16,8 +18,8 @@
   --color-smoke: #94A3B8;
 
   /* Font families */
-  --font-display: 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Heebo', sans-serif;
+  --font-body: 'Inter', 'Heebo', sans-serif;
 
   /* Custom shadow */
   --shadow-glow-amber: 0 0 20px rgba(251, 191, 36, 0.3), 0 0 40px rgba(251, 191, 36, 0.1);
@@ -62,4 +64,14 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-navy-700) var(--color-navy-900);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+/* RTL: Flip directional icons/arrows */
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
 }
