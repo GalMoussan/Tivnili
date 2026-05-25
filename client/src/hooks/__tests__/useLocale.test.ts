@@ -44,7 +44,7 @@ describe('useLocale', () => {
     document.documentElement.removeAttribute('lang');
   });
 
-  it('returns "en" as default locale', () => {
+  it('returns "en" as default locale in test mode', () => {
     const { result } = renderHook(() => useLocale(), {
       wrapper: LocaleProvider,
     });

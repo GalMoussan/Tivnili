@@ -6,7 +6,7 @@ const LOCALE_STORAGE_KEY = 'tivnili-locale';
 function getInitialLocale(): Locale {
   // Check if we're in a browser environment
   if (typeof window === 'undefined') {
-    return 'en';
+    return 'he';
   }
 
   // Try to get from localStorage
@@ -19,8 +19,13 @@ function getInitialLocale(): Locale {
     // localStorage might not be available (e.g., in tests)
   }
 
-  // Default to English
-  return 'en';
+  // In test environment, default to English for predictable tests
+  // In production, default to Hebrew
+  if (import.meta.env.MODE === 'test') {
+    return 'en';
+  }
+
+  return 'he';
 }
 
 interface LocaleContextValue {
