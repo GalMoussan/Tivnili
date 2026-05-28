@@ -16,7 +16,7 @@ export function SocialProofSection() {
             if (prefersReducedMotion) {
               return (
                 <TestimonialBubble
-                  key={t.name}
+                  key={i}
                   name={t.name}
                   business={t.business}
                   message={t.message}
@@ -27,7 +27,7 @@ export function SocialProofSection() {
 
             return (
               <motion.div
-                key={t.name}
+                key={i}
                 className={`w-full flex ${t.align === 'right' ? 'justify-end' : 'justify-start'}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

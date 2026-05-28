@@ -3,13 +3,10 @@ import { NavBar } from './components/NavBar';
 import { HeroSection } from './sections/HeroSection';
 import { WhatYouGetSection } from './sections/WhatYouGetSection';
 import { WhoIAmSection } from './sections/WhoIAmSection';
-import { ServicesSection } from './sections/ServicesSection';
-import { ComparisonSection } from './sections/ComparisonSection';
-import { PortfolioSection } from './sections/PortfolioSection';
 import { HowItWorksSection } from './sections/HowItWorksSection';
 import { ManifestoSection } from './sections/ManifestoSection';
-import { PricingSection } from './sections/PricingSection';
 import { SocialProofSection } from './sections/SocialProofSection';
+import { PricingSection } from './sections/PricingSection';
 import { FinalCTASection } from './sections/FinalCTASection';
 import { Footer } from './sections/Footer';
 import { useContent } from './hooks/useContent';
@@ -63,12 +60,9 @@ function App() {
         <HeroSection />
         <WhatYouGetSection />
         <WhoIAmSection />
-        <ServicesSection />
-        <ComparisonSection />
-        <PortfolioSection />
-        <SocialProofSection />
-        <ManifestoSection />
         <HowItWorksSection />
+        <ManifestoSection />
+        <SocialProofSection />
         <PricingSection />
         <FinalCTASection />
         <Footer />
