@@ -39,7 +39,7 @@ export function AmethReveal() {
   useEffect(() => {
     if (!showIntro) return;
 
-    // Cycle through rejected phrases for 2 seconds
+    // Cycle through rejected phrases - 1.2 seconds each
     const phraseInterval = setInterval(() => {
       setCurrentPhrase((prev) => {
         if (prev < phrases.length - 1) {
@@ -49,21 +49,21 @@ export function AmethReveal() {
           return prev;
         }
       });
-    }, 700);
+    }, 1200);
 
-    // Show אמת after 2 seconds
+    // Show אמת after phrases complete (3 × 1.2s = 3.6s)
     const amethTimer = setTimeout(() => {
       setShowAmeth(true);
-    }, 2000);
+    }, 3600);
 
-    // Allow closing after 3 seconds total, or auto-close after 4 seconds
+    // Allow closing 1 second after אמת appears, auto-close after 6 seconds total
     const allowCloseTimer = setTimeout(() => {
       setAllowClose(true);
-    }, 3000);
+    }, 4600);
 
     const autoCloseTimer = setTimeout(() => {
       handleClose();
-    }, 4000);
+    }, 6000);
 
     return () => {
       clearInterval(phraseInterval);
