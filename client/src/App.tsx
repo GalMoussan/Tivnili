@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { NavBar } from './components/NavBar';
+import { AmethReveal } from './components/AmethReveal';
 import { HeroSection } from './sections/HeroSection';
 import { WhatYouGetSection } from './sections/WhatYouGetSection';
 import { WhoIAmSection } from './sections/WhoIAmSection';
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <>
+      <AmethReveal />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-amber-500 focus:text-navy-900 focus:font-semibold focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-300"
