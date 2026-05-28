@@ -1,28 +1,56 @@
 @import "tailwindcss";
 
 @theme {
-  /* Navy palette */
+  /* Warm Light Palette */
+  --color-cream: #F8F5EF; /* Primary background (warm cream) */
+  --color-cream-light: #FAF8F5; /* Lighter cream */
+  --color-cream-dark: #F0EBE3; /* Darker cream */
+  --color-warm-white: #FDFCFA; /* Softer white with warm tint */
+  --color-white: #FFFFFF; /* Pure white (use sparingly) */
+  --color-navy: #0B1120; /* Primary text */
+  --color-warm-gray: #6B7280; /* Secondary text */
+
+  /* Amber accent (keep from v1) */
+  --color-amber-400: #FBBF24;
+  --color-amber-500: #F59E0B;
+  --color-amber-600: #D97706;
+  --color-amber-hover: #D97706;
+
+  /* Legacy colors for gradual migration */
   --color-navy-600: #334155;
   --color-navy-700: #1E293B;
   --color-navy-800: #111827;
   --color-navy-900: #0B1120;
   --color-navy-950: #060A14;
-
-  /* Amber palette */
-  --color-amber-400: #FBBF24;
-  --color-amber-500: #F59E0B;
-  --color-amber-600: #D97706;
-
-  /* Neutrals */
-  --color-cream: #F8F7F4;
   --color-smoke: #94A3B8;
 
-  /* Font families */
-  --font-display: 'Plus Jakarta Sans', 'Heebo', sans-serif;
-  --font-body: 'Inter', 'Heebo', sans-serif;
+  /* Font families - Updated for redesign */
+  --font-display: 'Frank Ruhl Libre', 'Crimson Pro', serif;
+  --font-display-hebrew: 'Frank Ruhl Libre', serif;
+  --font-display-latin: 'Crimson Pro', serif;
+  --font-body: 'Assistant', 'Inter', sans-serif;
+  --font-body-hebrew: 'Assistant', sans-serif;
+  --font-body-latin: 'Inter', sans-serif;
 
   /* Custom shadow */
   --shadow-glow-amber: 0 0 20px rgba(251, 191, 36, 0.3), 0 0 40px rgba(251, 191, 36, 0.1);
+}
+
+/* Gradient Backgrounds - Soft Light Theme */
+.bg-gradient-warm {
+  background: linear-gradient(to bottom, var(--color-cream-light), var(--color-cream));
+}
+
+.bg-gradient-warm-reverse {
+  background: linear-gradient(to bottom, var(--color-cream), var(--color-cream-dark));
+}
+
+.bg-gradient-warm-to-navy {
+  background: linear-gradient(to bottom, var(--color-cream), var(--color-navy-900));
+}
+
+.bg-gradient-amber-glow {
+  background: linear-gradient(135deg, var(--color-cream) 0%, rgba(251, 191, 36, 0.05) 50%, var(--color-cream-dark) 100%);
 }
 
 /* Base styles */
@@ -31,8 +59,8 @@ html {
 }
 
 body {
-  background-color: var(--color-navy-900);
-  color: var(--color-cream);
+  background-color: var(--color-cream);
+  color: var(--color-navy);
   font-family: var(--font-body);
 }
 
@@ -42,28 +70,28 @@ body {
   color: var(--color-navy-900);
 }
 
-/* Custom scrollbar (dark theme) */
+/* Custom scrollbar (light theme) */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-navy-900);
+  background: var(--color-cream);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-navy-700);
+  background: var(--color-warm-gray);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-smoke);
+  background: var(--color-navy);
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-navy-700) var(--color-navy-900);
+  scrollbar-color: var(--color-warm-gray) var(--color-cream);
 }
 
 /* RTL Support */
@@ -74,4 +102,38 @@ body {
 /* RTL: Flip directional icons/arrows */
 [dir="rtl"] .flip-rtl {
   transform: scaleX(-1);
+}
+
+/* RTL: Icon mirroring class for directional icons */
+[dir="rtl"] .icon-directional {
+  transform: scaleX(-1);
+}
+
+/* Hebrew Typography: Tighter line-height (~6% tighter than Latin) */
+[lang="he"] body,
+[dir="rtl"] body {
+  line-height: 1.5; /* Base Latin is 1.6 */
+}
+
+[lang="he"] h1,
+[lang="he"] h2,
+[lang="he"] h3,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3 {
+  line-height: 1.1; /* Base Latin heading is 1.2 */
+}
+
+/* Subtle animations */
+@keyframes pulse-subtle {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.15);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
 }

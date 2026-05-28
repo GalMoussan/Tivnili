@@ -15,16 +15,16 @@ export function TestimonialBubble({
 
   return (
     <div className={`${alignClass} max-w-md`}>
-      <div className="bg-emerald-900/20 rounded-2xl px-5 py-4">
-        <span className="text-xs text-emerald-400 font-medium">WhatsApp</span>
+      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 shadow-sm">
+        <span className="text-xs text-emerald-600 font-medium">WhatsApp</span>
 
-        <p className="text-cream mt-2">{message}</p>
+        <p className="text-navy mt-2">{message}</p>
 
         <div className="flex items-center justify-between mt-2">
-          <span className="text-sm text-smoke">
+          <span className="text-sm text-warm-gray">
             {name} — {business}
           </span>
-          <span className="text-xs text-smoke/50 ml-4">2:34 PM</span>
+          <span className="text-xs text-warm-gray/50 ml-4">2:34 PM</span>
         </div>
       </div>
     </div>
