@@ -13,8 +13,6 @@ export function NavBar() {
   const { locale } = useLocale();
 
   const navLinks = [
-    { label: content.nav.services, href: '#services' },
-    { label: content.nav.work, href: '#work' },
     { label: content.nav.pricing, href: '#pricing' },
   ];
 
