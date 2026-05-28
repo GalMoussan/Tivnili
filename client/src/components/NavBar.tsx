@@ -31,7 +31,7 @@ export function NavBar() {
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-cream/95 backdrop-blur-md border-b border-navy/10 shadow-md'
+          ? 'bg-navy/95 backdrop-blur-md border-b border-amber-500/20 shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -49,7 +49,11 @@ export function NavBar() {
             <a
               key={link.label}
               href={link.href}
-              className="hidden sm:block text-sm text-navy hover:text-amber-500 transition-colors font-medium"
+              className={`hidden sm:block text-sm font-medium transition-colors ${
+                scrolled
+                  ? 'text-cream hover:text-amber-500'
+                  : 'text-navy hover:text-amber-500'
+              }`}
             >
               {link.label}
             </a>
