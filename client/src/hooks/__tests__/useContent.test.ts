@@ -24,7 +24,7 @@ describe('useContent', () => {
 
     const { result } = renderHook(() => useContent());
 
-    expect(result.current.content.hero.headline.before).toBe('Your business, run');
+    expect(result.current.content.hero.headline.before).toBe('Websites and AI tools');
     expect(result.current.content.hero.headline.highlight).toBe('smarter');
     expect(result.current.content.hero.headline.after).toBe('.');
     expect(result.current.content.nav.services).toBe('Services');
@@ -59,9 +59,8 @@ describe('useContent', () => {
     expect(content).toHaveProperty('meta');
     expect(content).toHaveProperty('nav');
     expect(content).toHaveProperty('hero');
-    expect(content).toHaveProperty('services');
-    expect(content).toHaveProperty('comparison');
-    expect(content).toHaveProperty('portfolio');
+    expect(content).toHaveProperty('whatYouGet');
+    expect(content).toHaveProperty('whoIAm');
     expect(content).toHaveProperty('socialProof');
     expect(content).toHaveProperty('manifesto');
     expect(content).toHaveProperty('howItWorks');
