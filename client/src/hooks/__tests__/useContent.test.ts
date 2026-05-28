@@ -86,10 +86,10 @@ describe('useContent', () => {
     expect(content.hero.headline).toHaveProperty('highlight');
     expect(content.hero.headline).toHaveProperty('after');
 
-    // Verify services structure
-    expect(content.services).toHaveProperty('heading');
-    expect(content.services).toHaveProperty('items');
-    expect(Array.isArray(content.services.items)).toBe(true);
+    // Verify whatYouGet structure
+    expect(content.whatYouGet).toHaveProperty('heading');
+    expect(content.whatYouGet).toHaveProperty('cards');
+    expect(Array.isArray(content.whatYouGet.cards)).toBe(true);
 
     // Verify pricing structure
     expect(content.pricing).toHaveProperty('heading');
@@ -111,9 +111,8 @@ describe('useContent', () => {
     expect(content).toHaveProperty('meta');
     expect(content).toHaveProperty('nav');
     expect(content).toHaveProperty('hero');
-    expect(content).toHaveProperty('services');
-    expect(content).toHaveProperty('comparison');
-    expect(content).toHaveProperty('portfolio');
+    expect(content).toHaveProperty('whatYouGet');
+    expect(content).toHaveProperty('whoIAm');
     expect(content).toHaveProperty('socialProof');
     expect(content).toHaveProperty('manifesto');
     expect(content).toHaveProperty('howItWorks');
@@ -122,7 +121,7 @@ describe('useContent', () => {
     expect(content).toHaveProperty('footer');
   });
 
-  it('services items array is not empty', () => {
+  it('whatYouGet cards array is not empty', () => {
     vi.mocked(useLocale).mockReturnValue({
       locale: 'en',
       setLocale: vi.fn(),
@@ -131,9 +130,11 @@ describe('useContent', () => {
 
     const { result } = renderHook(() => useContent());
 
-    expect(result.current.content.services.items.length).toBeGreaterThan(0);
-    expect(result.current.content.services.items[0]).toHaveProperty('title');
-    expect(result.current.content.services.items[0]).toHaveProperty('description');
+    expect(result.current.content.whatYouGet.cards.length).toBeGreaterThan(0);
+    expect(result.current.content.whatYouGet.cards[0]).toHaveProperty('title');
+    expect(result.current.content.whatYouGet.cards[0]).toHaveProperty('problem');
+    expect(result.current.content.whatYouGet.cards[0]).toHaveProperty('solution');
+    expect(result.current.content.whatYouGet.cards[0]).toHaveProperty('benefit');
   });
 
   it('pricing tiers array is not empty', () => {

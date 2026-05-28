@@ -28,8 +28,8 @@ export function WhoIAmSection() {
           {/* Photo */}
           <motion.div
             variants={fadeInUp}
-            initial={prefersReducedMotion ? false : 'hidden'}
-            whileInView={prefersReducedMotion ? false : 'visible'}
+            initial={prefersReducedMotion ? undefined : 'hidden'}
+            whileInView={prefersReducedMotion ? undefined : 'visible'}
             viewport={{ once: true, margin: '-50px' }}
             custom={0}
             className="order-1"
@@ -47,8 +47,8 @@ export function WhoIAmSection() {
           {/* Content */}
           <motion.div
             variants={fadeInUp}
-            initial={prefersReducedMotion ? false : 'hidden'}
-            whileInView={prefersReducedMotion ? false : 'visible'}
+            initial={prefersReducedMotion ? undefined : 'hidden'}
+            whileInView={prefersReducedMotion ? undefined : 'visible'}
             viewport={{ once: true, margin: '-50px' }}
             custom={0.1}
             className="order-2 flex flex-col gap-6"
