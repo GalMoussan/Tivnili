@@ -13,8 +13,8 @@ export function ComparisonRow({ oldWay, newWay, delay = 0 }: ComparisonRowProps)
   const prefersReducedMotion = useReducedMotion();
 
   const content = (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8 py-4 border-b border-white/10">
-      <span className="text-smoke line-through opacity-60 text-base sm:text-lg">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8 py-4 border-b border-warm-gray/20">
+      <span className="text-warm-gray line-through opacity-60 text-base sm:text-lg">
         {oldWay}
       </span>
       <span className="text-amber-500 font-semibold text-base sm:text-lg">
