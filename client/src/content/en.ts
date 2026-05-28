@@ -24,7 +24,7 @@ export const en = {
       highlight: 'for small Israeli businesses',
       after: '',
     },
-    subtitle: 'Solo, Tel Aviv, I answer personally. I'm building my founding client group — founder pricing, full attention, and your results become the first stories on this site.',
+    subtitle: 'Solo, Tel Aviv, I answer personally. I am building my founding client group — founder pricing, full attention, and your results become the first stories on this site.',
     whatsappPlaceholder: 'Tell me what your business needs →',
     whatsappAriaLabel: 'Your message',
     whatsappButtonAriaLabel: 'Send message via WhatsApp',
@@ -37,20 +37,20 @@ export const en = {
     cards: [
       {
         title: 'Quotes sent automatically',
-        problem: 'You're losing leads because you're too busy to reply.',
+        problem: 'You are losing leads because you are too busy to reply.',
         solution: 'AI that drafts quotes, sends them, and follows up — automatically.',
         benefit: 'No more customers slipping through the cracks.',
       },
       {
         title: 'Daily brief in 5 minutes',
-        problem: 'Monday mornings take you 2 hours to figure out what's happening.',
+        problem: 'Monday mornings take you 2 hours to figure out what is happening.',
         solution: 'AI that reads everything and gives you a summary: what needs attention, what can wait.',
         benefit: '2 hours became 5 minutes. Every morning.',
       },
       {
         title: 'Customer response 24/7',
-        problem: 'Customers message on Shabbat, middle of the night, and you're not there.',
-        solution: 'AI that answers, books appointments, asks questions — even when you're sleeping.',
+        problem: 'Customers message on Shabbat, middle of the night, and you are not there.',
+        solution: 'AI that answers, books appointments, asks questions — even when you are sleeping.',
         benefit: 'Happier customers. Better sleep for you.',
       },
     ],
@@ -72,7 +72,7 @@ export const en = {
     ],
     footer: {
       hebrew: 'אמת',
-      text: '— it's just honest.',
+      text: '— it is just honest.',
     },
   },
   portfolio: {
@@ -99,15 +99,15 @@ export const en = {
         source: 'Industry reports 2026',
       },
     ],
-    statsSubline: 'These are industry numbers — not mine. I'm building my first client stories now. Want to be one of them?',
+    statsSubline: 'These are industry numbers — not mine. I am building my first client stories now. Want to be one of them?',
     useCases: [
       {
-        name: 'The Owner's Daily Brief',
+        name: 'The Owner Daily Brief',
         description: 'Wake up to an AI-written summary of what needs your attention — deals, messages, decisions — instead of digging for it. The kind of thing that turns a 2-hour Monday into 20 minutes.',
         tags: ['Time back to owner', 'Daily clarity'],
       },
       {
-        name: 'Quote & Follow-Up Autopilot',
+        name: 'Quote and Follow-Up Autopilot',
         description: 'AI drafts your quotes, chases the follow-ups you forget, and keeps communication warm with leads — so leads stop slipping through the cracks.',
         tags: ['More deals closed', 'Zero leads dropped'],
       },
@@ -118,7 +118,7 @@ export const en = {
       },
       {
         name: 'Your Business, Always On',
-        description: 'A customer-facing AI that responds, books, and takes inquiries 24/7 — so you're available even when you're surfing, sleeping, or off the clock.',
+        description: 'A customer-facing AI that responds, books, and takes inquiries 24/7 — so you are available even when you are surfing, sleeping, or off the clock.',
         tags: ['24/7 availability', 'Happier customers'],
       },
     ],
@@ -129,13 +129,13 @@ export const en = {
         align: 'left' as const,
         name: '',
         business: '',
-        message: 'I'm taking on a small number of founding clients right now. Founder pricing, full personal attention, and your results become the first real stories on this page.',
+        message: 'I am taking on a small number of founding clients right now. Founder pricing, full personal attention, and your results become the first real stories on this page.',
       },
       {
         align: 'right' as const,
         name: '',
         business: '',
-        message: 'No case studies here yet — on purpose. I'd rather show you real ones than invent fake ones. Want to be the first?',
+        message: 'No case studies here yet — on purpose. I would rather show you real ones than invent fake ones. Want to be the first?',
       },
       {
         align: 'left' as const,
@@ -160,7 +160,7 @@ export const en = {
       {
         number: '01',
         title: 'We talk. I listen.',
-        description: '30-45 minute meeting. You walk me through your business — your day, your decisions, your problems, the stuff eating your time. I'm listening for the one thing AI can fix that gives you the most breathing room.',
+        description: '30-45 minute meeting. You walk me through your business — your day, your decisions, your problems, the stuff eating your time. I am listening for the one thing AI can fix that gives you the most breathing room.',
       },
       {
         number: '02',
@@ -170,7 +170,7 @@ export const en = {
       {
         number: '03',
         title: 'It works. Then we expand.',
-        description: 'Once that's running and proving itself, we add more — more connectors, more automations, more time back. We grow your AI layer at your pace, not all at once.',
+        description: 'Once that is running and proving itself, we add more — more connectors, more automations, more time back. We grow your AI layer at your pace, not all at once.',
       },
     ],
     disclaimer: 'After the first meeting, you decide whether to continue. No obligation.',
@@ -189,7 +189,7 @@ export const en = {
           'A concrete recommendation: the single highest-impact AI integration for you',
           'A clear next-step plan — no obligation to continue',
         ],
-        whatsappMessage: 'Hi, I'm interested in the Clarity Session — when can we schedule?',
+        whatsappMessage: 'Hi, I am interested in the Clarity Session — when can we schedule?',
       },
       {
         name: 'The Integration',
@@ -202,10 +202,10 @@ export const en = {
           'One custom AI integration built for your role',
           'Examples: automated quote management, daily brief, or customer response AI',
           'WhatsApp / email-based setup so it lives where you already work',
-          '1-on-1 onboarding + handoff',
+          '1-on-1 onboarding and handoff',
           '2 weeks of fine-tuning support',
         ],
-        whatsappMessage: 'Hi, I'm interested in The Integration — let's talk about what I need.',
+        whatsappMessage: 'Hi, I am interested in The Integration — let us talk about what I need.',
       },
       {
         name: 'The Complete System',
@@ -219,7 +219,7 @@ export const en = {
           'Priority support',
           'Ongoing post-launch support',
         ],
-        whatsappMessage: 'Hi, I'm interested in The Complete System — let's talk about my business.',
+        whatsappMessage: 'Hi, I am interested in The Complete System — let us talk about my business.',
       },
     ],
   },
@@ -229,7 +229,7 @@ export const en = {
       highlight: 'time back?',
       after: '',
     },
-    subtitle: 'Let's build the system that gives you your weekends back.',
+    subtitle: 'Let us build the system that gives you your weekends back.',
     footer: 'Usually responds within the hour. No account managers, no bots answering for me. Just me.',
   },
   footer: {
