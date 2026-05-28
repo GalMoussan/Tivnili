@@ -7,7 +7,7 @@ export function ComparisonSection() {
   const { content } = useContent();
 
   return (
-    <SectionWrapper className="py-12 sm:py-16 lg:py-20">
+    <SectionWrapper className="py-12 sm:py-16 lg:py-20 bg-gradient-warm">
       <Container>
         <div className="max-w-3xl mx-auto">
           {content.comparison.rows.map((row, i) => (
@@ -19,7 +19,7 @@ export function ComparisonSection() {
             />
           ))}
 
-          <p className="mt-12 text-center text-smoke text-sm">
+          <p className="mt-12 text-center text-warm-gray text-sm">
             <span lang="he">{content.comparison.footer.hebrew}</span> {content.comparison.footer.text}
           </p>
         </div>

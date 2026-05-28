@@ -10,7 +10,7 @@ describe('T013 — PricingSection', () => {
     render(<PricingSection />);
     expect(screen.getByText('The Clarity Session')).toBeInTheDocument();
     expect(screen.getByText('The Integration')).toBeInTheDocument();
-    expect(screen.getByText('The Full Stack')).toBeInTheDocument();
+    expect(screen.getByText('The Complete System')).toBeInTheDocument();
   });
 
   it('renders prices', () => {

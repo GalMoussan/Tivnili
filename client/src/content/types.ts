@@ -30,12 +30,21 @@ export interface Content {
     ctaPrimary: string;
     ctaSecondary: string;
   };
-  services: {
+  whatYouGet: {
     heading: string;
-    items: Array<{
+    cards: Array<{
       title: string;
-      description: string;
+      problem: string;
+      solution: string;
+      benefit: string;
     }>;
+  };
+  whoIAm: {
+    heading: string;
+    name: string;
+    location: string;
+    story: string;
+    currentStatus: string;
   };
   comparison: {
     rows: Array<{
@@ -80,6 +89,7 @@ export interface Content {
       title: string;
       description: string;
     }>;
+    disclaimer?: string;
   };
   pricing: {
     heading: string;

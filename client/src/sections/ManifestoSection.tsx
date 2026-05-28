@@ -102,8 +102,8 @@ export function ManifestoSection() {
             );
           })}
 
-          <p lang="he" className="mt-12">
-            <span className="text-5xl font-bold text-amber-500 sm:text-6xl md:text-8xl">
+          <p lang="he" className="mt-16">
+            <span className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 sm:text-7xl md:text-9xl animate-pulse-subtle">
               {content.manifesto.hebrew}
             </span>
           </p>

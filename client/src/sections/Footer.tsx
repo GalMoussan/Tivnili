@@ -20,19 +20,19 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-navy-950 border-t border-white/5 py-12">
+    <footer className="bg-navy-900 border-t border-cream/10 py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col items-center gap-8">
         {/* Logo */}
         <div className="flex flex-col items-center gap-1">
           <img
-            src="/wordmark-hebrew.png"
-            alt="תִּבְנִילִי"
+            src={locale === 'he' ? '/wordmark-hebrew.png' : '/wordmark-tivnili.png'}
+            alt={locale === 'he' ? 'תִּבְנִילִי' : 'tivnili'}
             className="h-12"
           />
         </div>
 
         {/* Tagline */}
-        <p className="text-sm text-smoke">
+        <p className="text-sm text-cream/80">
           {content.footer.tagline}
         </p>
 
@@ -42,7 +42,7 @@ export function Footer() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-smoke/70 hover:text-amber-500 transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:rounded"
+              className="text-sm text-cream/60 hover:text-amber-500 transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:rounded"
               {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             >
               {link.label}
@@ -51,7 +51,7 @@ export function Footer() {
         </nav>
 
         {/* Copyright */}
-        <p className="text-xs text-smoke/50">
+        <p className="text-xs text-cream/40">
           &copy; {year} {content.footer.logoText}. {content.footer.copyright}
         </p>
       </div>

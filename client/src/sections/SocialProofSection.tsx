@@ -9,14 +9,14 @@ export function SocialProofSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <SectionWrapper className="py-12 sm:py-16 lg:py-20">
+    <SectionWrapper className="py-12 sm:py-16 lg:py-20 bg-gradient-warm">
       <Container>
         <div className="flex flex-col gap-6 items-center max-w-2xl mx-auto">
           {content.socialProof.testimonials.map((t, i) => {
             if (prefersReducedMotion) {
               return (
                 <TestimonialBubble
-                  key={t.name}
+                  key={i}
                   name={t.name}
                   business={t.business}
                   message={t.message}
@@ -27,7 +27,7 @@ export function SocialProofSection() {
 
             return (
               <motion.div
-                key={t.name}
+                key={i}
                 className={`w-full flex ${t.align === 'right' ? 'justify-end' : 'justify-start'}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

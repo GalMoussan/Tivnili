@@ -45,12 +45,12 @@ export function WhatsAppInput({
         onKeyDown={handleKeyDown}
         placeholder={placeholder}
         aria-label={ariaLabel}
-        className="w-full rounded-full bg-navy-800 border border-white/10 py-4 pl-5 pr-14 sm:pl-6 text-cream placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:shadow-glow-amber transition-shadow min-h-[48px]"
+        className="w-full rounded-full bg-white border border-warm-gray/20 py-4 pl-5 pr-14 sm:pl-6 text-navy placeholder:text-warm-gray/50 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all min-h-[48px] shadow-sm"
       />
       <button
         type="submit"
         aria-label={buttonAriaLabel}
-        className="absolute right-2 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-navy-900 hover:bg-amber-400 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-navy-800"
+        className="absolute right-2 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
