@@ -65,7 +65,7 @@ export function WhatYouGetSection() {
   const { content } = useContent();
 
   return (
-    <SectionWrapper className="py-12 sm:py-16 lg:py-20 bg-gradient-warm-reverse">
+    <SectionWrapper id="what-you-get" className="py-12 sm:py-16 lg:py-20 bg-gradient-warm-reverse scroll-mt-32">
       <Container>
         <SectionHeading>{content.whatYouGet.heading}</SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">

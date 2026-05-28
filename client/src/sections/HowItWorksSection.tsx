@@ -9,7 +9,7 @@ export function HowItWorksSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <SectionWrapper className="py-12 sm:py-16 lg:py-20 bg-gradient-amber-glow">
+    <SectionWrapper id="how-it-works" className="py-12 sm:py-16 lg:py-20 bg-gradient-amber-glow scroll-mt-32">
       <Container>
         <SectionHeading>{content.howItWorks.heading}</SectionHeading>
         <div className="mt-10 space-y-12">
