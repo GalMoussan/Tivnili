@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { NavBar } from './components/NavBar';
 import { HeroSection } from './sections/HeroSection';
+import { WhatYouGetSection } from './sections/WhatYouGetSection';
+import { WhoIAmSection } from './sections/WhoIAmSection';
 import { ServicesSection } from './sections/ServicesSection';
 import { ComparisonSection } from './sections/ComparisonSection';
 import { PortfolioSection } from './sections/PortfolioSection';
@@ -59,6 +61,8 @@ function App() {
       <NavBar />
       <main id="main-content" className="overflow-x-hidden">
         <HeroSection />
+        <WhatYouGetSection />
+        <WhoIAmSection />
         <ServicesSection />
         <ComparisonSection />
         <PortfolioSection />
